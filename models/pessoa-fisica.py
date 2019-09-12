@@ -13,8 +13,14 @@ class PessoaFisica(pessoa.Pessoa):
     def setNome(self, nome):
         self.nome = nome
 
+    def setDataNascimento(self, dataNascimento):
+        self.dataNascimento = dataNascimento
+
     def getCpf(self):
         return self.cpf
+
+    def getNome(self):
+        return self.nome
 
     def getDataNascimento(self):
         return self.dataNascimento
