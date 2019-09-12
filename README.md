@@ -5,12 +5,12 @@ Trabalho de A1 - Sistema Bancário
 ÁREA DE CIÊNCIAS EXATAS E AMBIENTAIS  
 CURSO DE SISTEMAS DE INFORMAÇÃO**
 
-**Componente Curricular: Algoritmos II
-Professor: Jozé Carlos Toniazzo
+**Componente Curricular: Algoritmos II  
+Professor: Jozé Carlos Toniazzo  
 Acadêmicos: Wesley Sartori e  Weiler Cavasotto.**
 
-**1** - Criar um programa completo para CRUD de dados (o grupo define o tema) 
-O programa deve possuir todos os recursos aprendidos em aula, 
+**1** - Criar um programa completo para CRUD de dados (o grupo define o tema)  
+O programa deve possuir todos os recursos aprendidos em aula,  
 evitando cópias de código ou usar apenas o que foi passado em aula.
 
 **Entregar:**
