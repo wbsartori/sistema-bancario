@@ -30,14 +30,14 @@ Tecnologia utilizada: Python 3.6.9
 
 **FUNCIONALIDADES SISTEMA BANCÁRIO**
 
-Cadastro de Clientes
-Lista de Clientes
-Alteração de Clientes
-Exclusão de Clientes
-Transações de saque, depósito, saldo e transferência
-Autenticação de usuário
-Menu interativo do sistema
-Gravação de dados via arquivos
+- Cadastro de Clientes
+- Lista de Clientes
+- Alteração de Clientes
+- Exclusão de Clientes
+- Transações de saque, depósito, saldo e transferência
+- Autenticação de usuário
+- Menu interativo do sistema
+- Gravação de dados via arquivos
 
 
 **ESTRUTURA**
