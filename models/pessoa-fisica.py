@@ -1,6 +1,6 @@
 from models import pessoa
 
-class PessoaFisica(pessoa):
+class PessoaFisica(pessoa.Pessoa):
     def __init__(self,telefone, endereco, cidade, cpf, nome, dataNascimento):
         super().__init__(telefone, endereco, cidade)
         self.cpf = cpf
