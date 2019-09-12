@@ -59,3 +59,10 @@ Conceitos de Orientação a Objetos
 - ControllerPessoa
 - ControllerTransacoes
 - ControllerUsuario
+
+http://www.figlet.org/
+http://www.figlet.org/examples.html
+https://pypi.org/project/pyfiglet/0.7/
+https://medium.com/@kjingo12/creating-pretty-command-line-interfaces-141ce31fdb69
+https://www.tutorialspoint.com/python3/python_break_statement.htm
+https://www.programiz.com/python-programming/time/sleep
