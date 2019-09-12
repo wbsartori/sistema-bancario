@@ -25,8 +25,8 @@ evitando cópias de código ou usar apenas o que foi passado em aula.
 	- Documentar tudo o que foi utilizado.
 
 **TEMA**
-Sistema Bancário
-Tecnologia utilizada: Python 3.6.9
+- Sistema Bancário
+- Tecnologia utilizada: Python 3.6.9
 
 **FUNCIONALIDADES SISTEMA BANCÁRIO**
 
@@ -44,18 +44,18 @@ Tecnologia utilizada: Python 3.6.9
 Conceitos de Orientação a Objetos
 
 **Models**
-Pessoa
-Pessoa Física
-Pessoa Jurídica
-Conta
-Conta Corrente
-Conta Poupança
-Usuario
-Transações
-Menu
+- Conta
+- Conta Corrente
+- Conta Poupança
+- Menu
+- Pessoa
+- Pessoa Física
+- Pessoa Jurídica
+- Transações
+- Usuario
 
 **Controllers**
-ControllerPessoa
-ControllerConta
-ControllerUsuario
-ControllerTransacoes
+- ControllerConta
+- ControllerPessoa
+- ControllerTransacoes
+- ControllerUsuario
