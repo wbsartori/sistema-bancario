@@ -1,19 +1,19 @@
 # sistema-bancario
 Trabalho de A1 - Sistema Bancário
 
-UNIVERSIDADE COMUNITÁRIA DA REGIÃO DE CHAPECÓ - UNOCHAPECÓ
-ÁREA DE CIÊNCIAS EXATAS E AMBIENTAIS
-CURSO DE SISTEMAS DE INFORMAÇÃO
+#UNIVERSIDADE COMUNITÁRIA DA REGIÃO DE CHAPECÓ - UNOCHAPECÓ
+#ÁREA DE CIÊNCIAS EXATAS E AMBIENTAIS
+#CURSO DE SISTEMAS DE INFORMAÇÃO
 
-Componente Curricular: Algoritmos II
-Professor: Jozé Carlos Toniazzo
-Acadêmicos: Wesley Sartori e  Weiler Cavasotto.
+#Componente Curricular: Algoritmos II
+#Professor: Jozé Carlos Toniazzo
+#Acadêmicos: Wesley Sartori e  Weiler Cavasotto.
 
 1 - Criar um programa completo para CRUD de dados (o grupo define o tema) 
 O programa deve possuir todos os recursos aprendidos em aula, 
 evitando cópias de código ou usar apenas o que foi passado em aula.
 
-Entregar: 
+#Entregar: 
  - Um arquivo zipado com:
 	- O código fonte.
 	- Arquivos pré-gravados com registros (ex: log.txt)
@@ -24,11 +24,11 @@ Entregar:
 	- Como fez
 	- Documentar tudo o que foi utilizado.
 
-TEMA  
+#TEMA  
 Sistema Bancário
 Tecnologia utilizada: Python 3.6.9
 
-FUNCIONALIDADES SISTEMA BANCÁRIO
+#FUNCIONALIDADES SISTEMA BANCÁRIO
 
 Cadastro de Clientes
 Lista de Clientes
@@ -40,10 +40,10 @@ Menu interativo do sistema
 Gravação de dados via arquivos
 
 
-ESTRUTURA
+#ESTRUTURA
 Conceitos de Orientação a Objetos
 
-Models
+#Models
 Pessoa
 Pessoa Física
 Pessoa Jurídica
@@ -54,7 +54,7 @@ Usuario
 Transações
 Menu
 
-Controllers
+#Controllers
 ControllerPessoa
 ControllerConta
 ControllerUsuario
