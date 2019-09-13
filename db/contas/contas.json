@@ -1,0 +1,12 @@
+{
+  "Contas": [
+    {
+      "codigo": "codigo",
+      "titular": "titular",
+      "numeroConta" : "numeroConta",
+      "agencia" : "agencia",
+      "tipo" : "tipo",
+      "saldo": "saldo"
+    }
+  ]
+}
