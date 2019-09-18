@@ -1,14 +1,18 @@
 class Conta:
-    def __init__(self, codigo, titular,numeroConta, agencia, tipo, saldo):
-        self.codigo = codigo
+    def __init__(self, id,id_usuario, titular,numeroConta, agencia, tipo, saldo):
+        self.id = id
+        self.id_usuario = id_usuario
         self.titular = titular
         self.agencia = agencia
         self.numeroConta = numeroConta
         self.tipo = tipo
         self.saldo = saldo
 
-    def setCodigo(self, codigo):
-        self.codigo = codigo
+    def setId(self, id):
+        self.id = id
+
+    def setIdUsuario(self, id_usuario):
+        self.id_usuario = id_usuario
 
     def setTitular(self, titular):
         self.titular = titular
@@ -22,8 +26,11 @@ class Conta:
     def setTipo(self, tipo):
         self.tipo = tipo
 
-    def getCodigo(self, codigo):
-        return self.codigo
+    def getId(self, id):
+        return self.id
+
+    def getIdUsuario(self, id_usuario):
+        return self.id_usuario
 
     def getTitular(self, titular):
         return self.titular
