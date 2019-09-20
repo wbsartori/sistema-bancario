@@ -21,6 +21,7 @@ class UsuarioService():
         pass
 
     def efetuarLogin(self, usuario, senha):
+
         if (usuario and senha):
             senha_criptografada = self.encryptSenha(self, senha.encode('utf-8'))
 

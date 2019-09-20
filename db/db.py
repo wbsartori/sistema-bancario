@@ -13,12 +13,15 @@ class DB():
         pass
 
     def getJSON(self, tabela):
-        return tabela + '.json'
+
+        here = os.path.dirname(os.path.abspath(__file__))
+        filename = os.path.join(here, tabela + '.json')
+
+        return filename
 
     def select(self, tabela, where):
 
-        here = os.path.dirname(os.path.abspath(__file__))
-        filename = os.path.join(here, self.getJSON(self, tabela))
+        filename = self.getJSON(self, tabela)
 
         with open(filename) as file:
             banco = json.load(file)
@@ -27,10 +30,26 @@ class DB():
                 return banco[tabela]
             elif len(where) == 2:
 
-                retorno = { }
-
                 for usuario in banco[tabela]:
 
                     if usuario[where[0]] == where[1]:
-                        retorno = usuario
-                        return retorno
+                        return usuario
+
+    def delete(self, tabela, campo, valor):
+        filename = self.getJSON(self, tabela)
+
+        with open(filename) as file:
+            banco = json.load(file)
+
+            length = len(banco[tabela])
+
+            for usuario in range(length):
+
+                if banco[tabela][usuario][campo] == str(valor):
+                    del banco[tabela][usuario]
+
+            with open(filename, 'w') as file:
+                json.dump(banco, file)
+
+    def edit(self, tabela, where, valores):
+        pass
