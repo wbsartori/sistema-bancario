@@ -1,5 +1,7 @@
 import json
 import os
+import sys
+
 
 class DB():
 
@@ -33,6 +35,17 @@ class DB():
 
                     if usuario[where[0]] == where[1]:
                         return usuario
+
+    def insert(self, tabela, valores):
+        filename = self.getJSON(self, tabela)
+
+        with open(filename) as file:
+            banco = json.load(file)
+
+            if (valores):
+                banco[tabela].append(valores)
+        with open(filename, 'w') as file:
+            json.dump(banco, file)
 
     def delete(self, tabela, campo, valor):
         filename = self.getJSON(self, tabela)
