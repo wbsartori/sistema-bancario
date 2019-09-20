@@ -1,5 +1,4 @@
 import json
-import sys
 import os
 
 class DB():
@@ -52,4 +51,17 @@ class DB():
                 json.dump(banco, file)
 
     def edit(self, tabela, where, valores):
-        pass
+        filename = self.getJSON(self, tabela)
+
+        with open(filename) as file:
+            banco = json.load(file)
+
+            length = len(banco[tabela])
+
+            for row in range(length):
+
+                if banco[tabela][row][where[0]] == str(where[1]):
+                    banco[tabela][row] = valores
+
+            with open(filename, 'w') as file:
+                json.dump(banco, file)
