@@ -1,4 +1,5 @@
 from view import login
+
 #Importa as libs
 import platform #Lib que reconhece o sistema operacional
 import os       #Lib que possui recursos do sistema operacional

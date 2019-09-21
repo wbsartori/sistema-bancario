@@ -6,6 +6,7 @@ import sys
 import time
 from pyfiglet import Figlet #Lib para criar interface mais elaborada
 from view import operacoes
+from view import cadastros
 from getpass import getpass
 from service import UsuarioService
 import hashlib
@@ -66,7 +67,9 @@ class Login():
                 # Se o login foi válido, chama a view de operações do usuário
                 # Se não é renderizado o menu novamente na tela
                 if response:
-                    operacoes.Operacoes().menu(response['id'])
+                    #operacoes.Operacoes().menu(response['id'])
+                     cadastros.Cadastros().menu(response['id'])
+
                 else:
                     self.menu()
 
