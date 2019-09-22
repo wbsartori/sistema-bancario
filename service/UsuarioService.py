@@ -15,13 +15,13 @@ class UsuarioService():
             return retornoCriar
 
     def listar(self):
-        pass
+        return db.DB.select(db.DB, 'usuario', '')
 
     def alterar(self):
         pass
 
-    def excluir(self):
-        pass
+    def excluir(self, id):
+        return db.DB.delete(db.DB, 'usuario', 'id', id)
 
     def efetuarLogin(self, usuario, senha):
 

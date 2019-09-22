@@ -100,6 +100,21 @@ class Cadastros():
                 print('')
                 if listarOP == 1:
                     print('Lista de Clientes')
+
+                    usuarioService = UsuarioService.UsuarioService
+                    usuarios = usuarioService.listar(usuarioService)
+
+                    if (usuarios):
+                        self.clear()
+                        print('------------------')
+                        for user in usuarios:
+                            print('ID: ' + user['id'])
+                            print('\nLogin: ' + user['usuario'])
+                            print('\nStatus: ' + user['status'])
+                            print('------------------')
+
+                    input(str('\nDigite algo para continuar...\n'))
+
                 else:
                     print('Finalizando Operação de Listagem.')
                     time.sleep(1)
@@ -143,7 +158,15 @@ class Cadastros():
                 excluirOP = int(input('Operação: '))
                 print('')
                 if excluirOP == 1:
-                    print('Excluindo Cliente')
+                    id = input(str('Digite o ID do usuário que deseja excluir:'))
+
+                    usuarioService = UsuarioService.UsuarioService
+                    retorno = usuarioService.excluir(usuarioService, id)
+
+                    if retorno:
+                        print('Usuário removido com sucesso!')
+                    else:
+                        print('Erro ao remover usuário!')
                     time.sleep(1)
                 else:
                     print('Finalizando Operação de Exclusão.')

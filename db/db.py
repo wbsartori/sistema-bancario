@@ -63,7 +63,9 @@ class DB():
                     del banco[tabela][usuario]
 
             with open(filename, 'w') as file:
-                json.dump(banco, file)
+                json.dump(banco, file, indent=4)
+
+        return True
 
     def edit(self, tabela, where, valores):
         filename = self.getJSON(self, tabela)
@@ -79,4 +81,4 @@ class DB():
                     banco[tabela][row] = valores
 
             with open(filename, 'w') as file:
-                json.dump(banco, file)
+                json.dump(banco, file, indent=4)
