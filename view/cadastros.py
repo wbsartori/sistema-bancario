@@ -7,6 +7,7 @@ from pyfiglet import Figlet #Lib para criar interface mais elaborada
 
 
 from service import ContaService
+from service import UsuarioService
 
 class Cadastros():
     #Função para limpar console de acordo com sistema operacional
@@ -45,16 +46,31 @@ class Cadastros():
                 novoOP = int(input('Operação: '))
                 print('')
                 if novoOP == 1:
-                    print('Inserir os dados')
-                    id          = input('ID: ')
-                    titular     = input('Titular: ')
-                    agencia     = input('Agencia: ')
-                    numeroConta = input('Numero da Conta: ')
-                    tipo        = input('Tipo: ')
-                    saldo       = input('Saldo: ')
+
+                    print('Dados Login')
+                    dados = {}
+                    dados['id'] = input('ID: ')
+                    dados['usuario'] = input('Login: ')
+                    dados['senha'] = input('Senha:')
+                    dados['status'] = 'A'
+                    dados['admin'] = 'false'
+
+                    usuarioService = UsuarioService.UsuarioService
+                    usuarioService.criar(usuarioService, dados)
+
+                    print('\nDados Conta')
+                    dadosConta = {}
+                    dadosConta['id']          = input('ID: ')
+                    dadosConta['titular']     = input('Titular: ')
+                    dadosConta['agencia']     = input('Agencia: ')
+                    dadosConta['numeroConta'] = input('Numero da Conta: ')
+                    dadosConta['tipo']        = input('Tipo: ')
+                    dadosConta['saldo']       = input('Saldo: ')
+
+                    dadosConta['id_usuario'] = dados['id']
 
                     contaService = ContaService.ContaService
-                    response = contaService.criar(contaService, id, titular,agencia,numeroConta,tipo,saldo)
+                    response = contaService.criar(contaService, dadosConta)
 
                     if response:
                         print('Usuário Cadastrado com Sucesso!')

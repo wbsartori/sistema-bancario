@@ -3,22 +3,10 @@ from db import db
 
 class ContaService():
 
-    def criar(self, id,titular,agencia,numeroConta,tipo,saldo):
+    def criar(self, dados):
 
-        data = {}
-        data['id'] = id
-        data['titular'] = titular
-        data['agencia'] = agencia
-        data['numeroConta'] = agencia
-        data['tipo'] = agencia
-        data['saldo'] = agencia
-
-        retornoCriar = db.DB.insert(db.DB, 'conta', data)
-
-        if retornoCriar:
-            retornoCriar()
-        else:
-            return False
+        retornoCriar = db.DB.insert(db.DB, 'conta', dados)
+        return retornoCriar
 
     def listar(self):
         pass

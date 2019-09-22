@@ -8,15 +8,10 @@ class UsuarioService():
 
     def criar(self, dados):
         if dados:
-            objeto = {}
-            objeto['id'] = dados.id
-            objeto['usuario'] = dados.usuario
-            objeto['senha'] = dados.senha
-            objeto['status'] = 'A'
-            objeto['admin'] = 'false'
 
-            retornoCriar = db.DB.insert(db.DB, 'usuario', objeto)
+            dados['senha'] = self.encryptSenha(self, dados['senha'].encode('utf-8'))
 
+            retornoCriar = db.DB.insert(db.DB, 'usuario', dados)
             return retornoCriar
 
     def listar(self):

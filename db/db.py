@@ -45,7 +45,9 @@ class DB():
             if (valores):
                 banco[tabela].append(valores)
         with open(filename, 'w') as file:
-            json.dump(banco, file)
+            json.dump(banco, file, indent=4)
+
+        return True
 
     def delete(self, tabela, campo, valor):
         filename = self.getJSON(self, tabela)
