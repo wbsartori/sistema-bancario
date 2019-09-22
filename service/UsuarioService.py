@@ -1,15 +1,23 @@
+# Biblioteca para criptografar a senha
 import hashlib
-import sys
 
-from model import usuario
-
-from model import usuario
+# Classe DB para realizar operações no sistema de arquivos
 from db import db
 
 class UsuarioService():
 
-    def criar(self):
-        pass
+    def criar(self, dados):
+        if dados:
+            objeto = {}
+            objeto['id'] = dados.id
+            objeto['usuario'] = dados.usuario
+            objeto['senha'] = dados.senha
+            objeto['status'] = 'A'
+            objeto['admin'] = 'false'
+
+            retornoCriar = db.DB.insert(db.DB, 'usuario', objeto)
+
+            return retornoCriar
 
     def listar(self):
         pass

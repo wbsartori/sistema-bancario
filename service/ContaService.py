@@ -5,7 +5,15 @@ class ContaService():
 
     def criar(self, id,titular,agencia,numeroConta,tipo,saldo):
 
-        retornoCriar = db.DB.insert(db.DB, 'conta', ['conta', id, titular, agencia, numeroConta, tipo, saldo])
+        data = {}
+        data['id'] = id
+        data['titular'] = titular
+        data['agencia'] = agencia
+        data['numeroConta'] = agencia
+        data['tipo'] = agencia
+        data['saldo'] = agencia
+
+        retornoCriar = db.DB.insert(db.DB, 'conta', data)
 
         if retornoCriar:
             retornoCriar()

@@ -67,8 +67,9 @@ class Login():
                 # Se o login foi válido, chama a view de operações do usuário
                 # Se não é renderizado o menu novamente na tela
                 if response:
-                    #operacoes.Operacoes().menu(response['id'])
-                     cadastros.Cadastros().menu(response['id'])
+                    # Operador ternário que verifica o tipo de usuário. Se ele for admin, é carregado a visão de
+                    # administrador, caso contrário o menu padrão é aberto.
+                    response['admin'] if cadastros.Cadastros().menu(response['id']) else operacoes.Operacoes().menu(response['id'])
 
                 else:
                     self.menu()

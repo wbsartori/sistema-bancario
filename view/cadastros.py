@@ -10,7 +10,7 @@ from service import ContaService
 
 class Cadastros():
     #Função para limpar console de acordo com sistema operacional
-    def clear():
+    def clear(self):
         if platform.system() == 'Windows':
             os.system('cls')
         else:
@@ -138,7 +138,7 @@ class Cadastros():
             elif opcoesPrincipal == 5:
                 i = ' '
                 print('')
-                print('Finalizando Sistema', end='')
+                print('Finalizando Sistema', '')
                 time.sleep(1)
 
                 for p in range(5):
