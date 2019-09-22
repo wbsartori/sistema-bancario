@@ -137,6 +137,25 @@ class Cadastros():
                 print('')
                 if editarOP == 1:
                     print('Editar Cliente.')
+
+                    id = input(str('Digite o ID do usuário que deseja editar:'))
+
+                    print('\nEditando Usuário ' + id + '\n')
+
+                    dados = {}
+                    dados['usuario'] = input('Login: ')
+                    dados['senha'] = input('Senha:')
+                    dados['status'] = input('Status: (A e I)')
+                    dados['admin'] = input('Admin: (true ou false')
+
+                    usuarioService = UsuarioService.UsuarioService
+                    retorno = usuarioService.alterar(usuarioService, dados, id)
+
+                    if retorno:
+                        print('Usuário editado com sucesso!')
+                    else:
+                        print('Erro ao editar usuário!')
+
                 else:
                     print('Finalizando Operação de Edição.')
                     time.sleep(1)

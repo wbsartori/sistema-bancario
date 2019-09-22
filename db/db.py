@@ -82,3 +82,5 @@ class DB():
 
             with open(filename, 'w') as file:
                 json.dump(banco, file, indent=4)
+
+        return True
