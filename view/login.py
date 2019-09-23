@@ -69,7 +69,7 @@ class Login():
                 if response:
                     # Operador ternário que verifica o tipo de usuário. Se ele for admin, é carregado a visão de
                     # administrador, caso contrário o menu padrão é aberto.
-                    response['admin'] if cadastros.Cadastros().menu(response['id']) else operacoes.Operacoes().menu(response['id'])
+                    cadastros.Cadastros().menu(response['id']) if response['admin'] == 'true' else operacoes.Operacoes().menu(response['id'])
 
                 else:
                     self.menu()
