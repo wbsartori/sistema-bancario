@@ -110,7 +110,8 @@ class Cadastros():
                         for user in usuarios:
                             print('ID: ' + user['id'])
                             print('\nLogin: ' + user['usuario'])
-                            print('\nStatus: ' + user['status'])
+                            print('\nStatus: ' + 'Ativo' if user['status'] == 'A' else 'Inativo')
+                            print('\nAdmin: ' + 'Sim' if user['admin'] == 'true' else 'Não')
                             print('------------------')
 
                     input(str('\nDigite algo para continuar...\n'))
@@ -143,10 +144,11 @@ class Cadastros():
                     print('\nEditando Usuário ' + id + '\n')
 
                     dados = {}
+                    dados['id'] = id
                     dados['usuario'] = input('Login: ')
-                    dados['senha'] = input('Senha:')
-                    dados['status'] = input('Status: (A e I)')
-                    dados['admin'] = input('Admin: (true ou false')
+                    dados['senha'] = input('Senha: ')
+                    dados['status'] = input('Status: (A e I) ')
+                    dados['admin'] = input('Admin: (true ou false) ')
 
                     usuarioService = UsuarioService.UsuarioService
                     retorno = usuarioService.alterar(usuarioService, dados, id)
