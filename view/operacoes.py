@@ -4,6 +4,7 @@ import os       #Lib que possui recursos do sistema operacional
 import sys
 import time
 from pyfiglet import Figlet #Lib para criar interface mais elaborada
+from service import ContaService
 
 class Operacoes():
     #Função para limpar console de acordo com sistema operacional
@@ -20,7 +21,7 @@ class Operacoes():
             print(result.renderText('LadroBank'))
             print('# Operações Disponíveis #')
             print('')
-            menuPrincipal = [' Sacar',' Depositar',' Transferir',' Saldo',' Sair']
+            menuPrincipal = [' Sacar',' Depositar', ' Saldo',' Sair']
             items = 1
             for mp in menuPrincipal:
                 print( str(items) + ' - ' + mp)
@@ -44,6 +45,14 @@ class Operacoes():
                 print('')
                 if saqueOP == 1:
                     saque = int(input('Valor a sacar: '))
+
+                    contaService = ContaService.ContaService
+                    retorno = contaService.sacar(contaService, saque, idUsuarioLogado)
+                    self.clear()
+                    print('\n')
+                    print(retorno)
+                    print('\nAguarde o dinheiro...\n')
+                    time.sleep(3)
                 else:
                     print('Finalizando Operação de Saque.')
                     time.sleep(1)
@@ -65,9 +74,15 @@ class Operacoes():
                 depositoOP = int(input('Operação: '))
                 print('')
                 if depositoOP == 1:
-                    conta = int(input('Conta: '))
-                    agencia = int(input('Agencia: '))
                     deposito = int(input('Valor a depositar: '))
+                    contaService = ContaService.ContaService
+
+                    retorno = contaService.depositar(contaService, deposito, idUsuarioLogado)
+                    self.clear()
+                    print('\n')
+                    print(retorno)
+                    print('\n')
+                    time.sleep(3)
                 else:
                     print('Finalizando Operação de Depósito.')
                     time.sleep(1)
@@ -75,31 +90,6 @@ class Operacoes():
                     time.sleep(0.8)
 
             elif opcoesPrincipal == 3:
-                self.clear()
-                ms = Figlet(font='doom')
-                print(ms.renderText('Transferencias'))
-                print('# Operações Disponíveis #')
-                print('')
-                menuTransferir = ['Transferir', 'Menu Principal']
-                items = 1
-                for mTransferir in menuTransferir:
-                    print(str(items) + ' - ' + mTransferir)
-                    items = items + 1
-                print('')
-                depositoOP = int(input('Operação: '))
-                print('')
-                if depositoOP == 1:
-                    conta = int(input('Conta: '))
-                    agencia = int(input('Agencia: '))
-                    deposito = int(input('Valor a transferir: '))
-                else:
-                    print('Finalizando Operação de Transferência.')
-                    time.sleep(1)
-                    print('Obrigado por utilizar nossos serviços.')
-                    time.sleep(0.8)
-
-
-            elif opcoesPrincipal == 4:
                 self.clear()
                 ms = Figlet(font='doom')
                 print(ms.renderText('Saldos'))
@@ -114,15 +104,20 @@ class Operacoes():
                 depositoOP = int(input('Operação: '))
                 print('')
                 if depositoOP == 1:
-                    print('Saldo = R$ 5000,00')
-                    time.sleep(1)
+                    contaService = ContaService.ContaService
+                    retorno = contaService.saldo(contaService, idUsuarioLogado)
+                    self.clear()
+                    print('\n')
+                    print(retorno)
+                    print('\n')
+                    str(input('Aperte enter para continuar...'))
                 else:
                     print('Finalizando Operação de Saldo.')
                     time.sleep(1)
                     print('Obrigado por utilizar nossos serviços.')
                     time.sleep(0.8)
 
-            elif opcoesPrincipal == 5:
+            elif opcoesPrincipal == 4:
                 i = ' '
                 print('')
                 print('Finalizando Sistema', '')
